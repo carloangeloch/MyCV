@@ -4,6 +4,19 @@
 function testClick(){
   alert ("I am clicked!");
 }
+
+
+
+$(".welcome-text").on("click",function(){
+  $(".welcome-text").css("opacity","0");
+  $(".center-circle").delay(300).animate({
+    width:'2500px',
+    height:'2500px',
+    left:'-1000px',
+    top:'-1000px'
+  },500);
+});
+
 // $(".navbar-toggler-icon").removeAttr("style");
 $(".head-title").animate({opacity: '1',top: '0'},500);
 $(".head-subtitle").delay(300).animate({opacity: '1',top: '0'},500);
@@ -19,7 +32,7 @@ $(window).scroll(function(){
   positionTop = $(document).scrollTop();
   // ANIMATE ON SCROLLING
   if(positionTop < 100){
-    $(".nav-holder").css("height","150px")
+    $(".nav-holder").css("height","150px");
     $(".nav-holder").css("backgroundColor","#fff");
     $(".navbar").css("paddingTop","35px");
     $(".navbar-brand").css("fontSize","3rem");
@@ -71,7 +84,7 @@ $(".navbar-toggler").on("click",function(){
     navToggle = true;
   }else{
     if(positionTop < 100){
-      $(".nav-holder").css("height","150px")
+      $(".nav-holder").css("height","150px");
     }else{
       $(".nav-holder").css("height","60px");
     }
@@ -87,5 +100,5 @@ $(".work-inner-div").each(function(){
   }, function(){
     $(this).children().css("opacity","0");
     $(this).children().css("top","20px");
-  })
+  });
 });
