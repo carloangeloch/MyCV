@@ -6,6 +6,12 @@ function testClick(){
 }
 
 
+function toHome(){
+    setTimeout(function(){
+      window.location.href = "home.html";
+    }, 1500);
+}
+
 
 $(".welcome-text").on("click",function(){
   $(".welcome-text").css("opacity","0");
